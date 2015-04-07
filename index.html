@@ -7,12 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<script src="bootstrap.min.js"></script>
 	<script type="text/javascript" src="my_script.js"></script>
+	<link rel="stylesheet" type="text/css" href="my_style.css">
   
 </head>
 <body>
-<!-- header -->
-<div class="container">
 
+<div class="container">
+<!-- header -->
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -23,26 +24,68 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	    
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-	      
-
 	      <form class="navbar-form navbar-right" role="search">
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Search">
 	        </div>
 	        <button type="submit" class="btn btn-default">Tim kiem</button>
 	      </form>
+	      <!-- Site map -->
+	      <ul class="nav navbar-nav navbar-left">
+	       <li><a href="#" id="signup" >Sign up</a></li>
+	    		<!-- Modal Sign up -->
+	    		<div id="sign_up" class="modal fade" tabindex="-1" role="dialog">
+					    <div class="modal-dialog">
+					        <div class="modal-content">
+					          <div class="modal-header">
+					            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
+					            <h3 id="myModalLabel">Dang ky thanh vien</h3>
+					          </div>
+					          <div class="modal-body">
 
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">User name</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password confirm</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  
+</form>
+					          
+					          </div>
+					          <div class="modal-footer">
+					          	<button type="submit" class="btn btn-default">Submit</button>
+					            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+					            
+					          </div>
+					        </div>
+      					</div>
+    				</div>
+	       <li><a href="#" >|</a></li>
+	       <li><a href="#" >Sign in</a></li>
+	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">Link</a></li>
-
+	        <li><a href="#">Site map</a></li>
+	        <!-- drop down -->
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chon chuyen muc <span class="caret"></span></a>
+	          <!-- drop down in header -->
 	          <ul class="dropdown-menu" role="menu">
 	            <li><a href="#">U19</a></li>
 	            <li><a href="#">Olympic Viet Nam</a></li>
@@ -51,50 +94,35 @@
 	            <li><a href="#">Doi tuyen thieu nhi ^^</a></li>
 	          </ul>
 	        </li>
-	        
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
-
-	<div class="collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-	           <li><a href="#">U19</a></li>
-	           <li><a href="#">Olympic VN</a></li>
-	           <li><a href="#">Doi tuyen quoc gia</a></li>
-	               
-	      </ul>
-	 </div>
-
-
-
+<!-- Title -->
   		<div class="jumbotron">
-			<h1>Project 1</h1>
-			<h2> Doi tuyen bong da Viet Nam </h2>
+			<h1 id="title">Project 1 - Bootstrap</h1>
+			<h3 id="sub_title"> Doi tuyen bong da Viet Nam </h3>
 	
  		</div>
-
 <!-- body -->
-		
 		<div class="row">
-			<div class=" col-md-4">
+			<!-- menu left -->
+			<div class="hidden-xs col-md-4 menu_left">
 				<ul class="nav nav-pills nav-stacked">
-			        <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Doi tuyen U19</a></li> 
-			        <li><a href="#">Olympic Viet Nam</a></li>
-        			<li><a href="#">Doi tuyen quoc gia</a></li>
-			
+			        <li class="active"><a href="#">Chon chuyen muc</a></li>
+                    <li><a href="#">Doi tuyen U19</a></li><br> 
+			        <li><a href="#">Olympic Viet Nam</a></li><br>
+        			<li><a href="#">Doi tuyen quoc gia</a></li><br>
 				</ul>
-				
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8 body_right">
 				<h2 >U19</h2>
-					<img src="images/vn.jpg" style="width:150px; float:left; margin-right:5px;" id="u19vn">
+					<img src="images/vn.jpg"  id="u19vn">
 					<p>
 						Sau 3 trận vòng bảng U.23 châu Á với 2 trận thắng, 1 thua, đội tuyển U.23 Việt Nam đã trở thành 5/10 đội nhì bảng có thành tích tốt giành vé đến Qatar. Một giải đấu cam go bởi trận ra quân cũng là trận quyết định gặp chủ nhà U.23 Malaysia, thầy trò ông Miura đã thắng 2-1. Hai trận còn lại (thua U.23 Nhật Bản 0-2 và thắng U.23 Macau) chẳng khác gì thủ tục vì nó đều không nằm ngoài dự đoán của ông Miura.
 					</p>
 
-					 <div id="u19" class="modal fade" tabindex="-1" role="dialog">
+					<div id="u19" class="modal fade" tabindex="-1" role="dialog">
 					    <div class="modal-dialog">
 					        <div class="modal-content">
 					          <div class="modal-header">
@@ -102,7 +130,9 @@
 					            <h3 id="myModalLabel">doi tuyen u19</h3>
 					          </div>
 					          <div class="modal-body">
-					            <img src="images/vn.jpg" width="500px" >
+
+					            <img src="images/vn.jpg" id="image" >
+					          
 					          </div>
 					          <div class="modal-footer">
 					            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -112,17 +142,16 @@
       					</div>
     				</div>
 
-
-
-
 				<h2>U23</h2>
+					<img src="images/vn.jpg"  id="u19vn">
 					<p>
 						Sau 3 trận vòng bảng U.23 châu Á với 2 trận thắng, 1 thua, đội tuyển U.23 Việt Nam đã trở thành 5/10 đội nhì bảng có thành tích tốt giành vé đến Qatar. Một giải đấu cam go bởi trận ra quân cũng là trận quyết định gặp chủ nhà U.23 Malaysia, thầy trò ông Miura đã thắng 2-1. Hai trận còn lại (thua U.23 Nhật Bản 0-2 và thắng U.23 Macau) chẳng khác gì thủ tục vì nó đều không nằm ngoài dự đoán của ông Miura.
 					</p>
 				<h2>QG</h2>
+					<img src="images/vn.jpg"  id="u19vn">
 					<p>
 						Sau 3 trận vòng bảng U.23 châu Á với 2 trận thắng, 1 thua, đội tuyển U.23 Việt Nam đã trở thành 5/10 đội nhì bảng có thành tích tốt giành vé đến Qatar. Một giải đấu cam go bởi trận ra quân cũng là trận quyết định gặp chủ nhà U.23 Malaysia, thầy trò ông Miura đã thắng 2-1. Hai trận còn lại (thua U.23 Nhật Bản 0-2 và thắng U.23 Macau) chẳng khác gì thủ tục vì nó đều không nằm ngoài dự đoán của ông Miura.
-				</p>
+					</p>
 			</div>
 		</div>
 	</div>

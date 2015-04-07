@@ -1,0 +1,46 @@
+.menu_left{
+	padding-top: 20px;
+	background: #eee;
+	font-size: 20px;
+	font-family: tahoma, arial;
+	font-weight: bold;
+	border-radius: 5px;
+	font-color:black;
+	line-height: 20px;
+	height: 100%;
+	border-right: 1px;
+}
+.body_right{
+	background: #eee;
+	font-size: 18px;
+	font-family: tahoma, arial;
+	border-radius: 5px;
+	font-color:black;
+	height: 100%;
+	
+}
+h2{
+	background:  #5bc0de;
+	font-weight: bolder;
+	font-color:white;
+	padding-left: 20px;
+	border-radius: 3px;
+}
+img{
+	width:150px; 
+	float:left; 
+	margin-right:5px;
+}
+#image{
+	width:450px;
+}
+#title{
+	text-align: center;
+	color: purple;
+	font-weight: bolder;
+}
+#sub_title{
+	text-align: center;
+	font- color: white;
+	font-weight: bolder;
+}

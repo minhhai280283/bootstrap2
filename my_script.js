@@ -8,6 +8,10 @@ $(document).ready(function(){
 		$("#u19").modal('show');
 
 	});
+	$("#signup").click(function(){
+		$("#sign_up").modal('show');
+
+	});
 	
 
 });
