@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>show loading</title>
+  <link rel="stylesheet" type="text/css" href="showloading.css">
+  <script type="text/javascript" src="showloading.js"></script>
+  <script type="text/javascript" src="my_scipt.js"></script>
+</head>
+<body>
+  <div class="instructions_container">
+    <div class="example_links">
+      
+  <div class="link_category">     
+        <div class="link">
+    <a class="loading-default" id="sd">Show default loading indicator</a>
+         </div>
+         <div class="link">
+    <a class="loading-hide">Hide default loading indicator</a>
+               </div>
+        </div>
+  <div class="link_category">     
+        <div class="link">
+    <a class="loading-ajax">simulate 1-second Ajax load</a>
+         </div>
+        </div>
+  <div class="link_category">     
+        <div class="link">
+    <a class="loading-bars">show 'bars'-style loading indicator</a>
+         </div>
+         <div class="link">
+    <a class="loading-hide">Hide 'bars'-style indicator</a>
+               </div>
+        </div>
+     </div> 
+     <div class="usage">
+  Usage with jQuery load method:
+        
+        <pre>
+jQuery('#activity_pane').showLoading();
+jQuery('#activity_pane').load(
+    '/path/to/my/url', 
+    {},
+    function() {
+      //
+      //this is the ajax callback 
+      //
+      jQuery('#activity_pane').hideLoading();
+    }
+);       
+     </pre>
+
+     </div>
+    </div>
+
+    <div id="activity_pane">
+            Here is where we will load something via ajax.
+            <br />
+            This container <b>must</b> have an id attribute
+    </div>
+    <div style="clear:both;"></div>
+</body>
+</html>
