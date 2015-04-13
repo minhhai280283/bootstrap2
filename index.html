@@ -14,6 +14,15 @@
   <link rel="stylesheet" type="text/css" href="demo.css">
 
 
+<!--autocompleted-->
+   
+   <link rel="stylesheet" href="autocomplete/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="autocomplete/kendo.dataviz.material.min.css" />
+    <link rel="stylesheet" href="autocomplete/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="autocomplete/kendo.dataviz.material.min.css" />
+
+    <script src="autocomplete/kendo.all.min.js"></script>
+
 </head>
 <body  >
 
@@ -29,6 +38,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        http://formvalidation.io/examples/bootstrap-tab/
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,16 +82,27 @@
                             <input type="password" class="form-control" id="password" placeholder="password" name="password">
                           </div>
                         </div>
+
                         <div class="form-group">
                           <label for="confirm_password" class="col-sm-2 control-label"> Confirm Password</label>
                           <div class="col-sm-10">
                             <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="cpassword">
                           </div>                      
                         </div>
+
+                        <div  class="form-group">
+                          <label for="country" class="col-sm-2 control-label">Country</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control info k-autocomplete" id="countries" name="country" placeholder="country" type="text">
+                          </div>
+                        </div>
+
                         <div class="modal-footer">
                              <button type="submit" class="btn btn-default" id="submit">Submit</button>
                              <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button> 
                         </div>
+
+
                       </form>   
                     </div>
                   </div>
@@ -166,6 +187,76 @@
             Sau 3 trận vòng bảng U.23 châu Á với 2 trận thắng, 1 thua, đội tuyển U.23 Việt Nam đã trở thành 5/10 đội nhì bảng có thành tích tốt giành vé đến Qatar. Một giải đấu cam go bởi trận ra quân cũng là trận quyết định gặp chủ nhà U.23 Malaysia, thầy trò ông Miura đã thắng 2-1. Hai trận còn lại (thua U.23 Nhật Bản 0-2 và thắng U.23 Macau) chẳng khác gì thủ tục vì nó đều không nằm ngoài dự đoán của ông Miura.
 
           </p>
+
+<div id="example">
+
+  
+
+            <script>
+                $(document).ready(function () {
+                    var data = [
+                            "Albania",
+                            "Andorra",
+                            "Armenia",
+                            "Austria",
+                            "Azerbaijan",
+                            "Belarus",
+                            "Belgium",
+                            "Bosnia & Herzegovina",
+                            "Bulgaria",
+                            "Croatia",
+                            "Cyprus",
+                            "Czech Republic",
+                            "Denmark",
+                            "Estonia",
+                            "Finland",
+                            "France",
+                            "Georgia",
+                            "Germany",
+                            "Greece",
+                            "Hungary",
+                            "Iceland",
+                            "Ireland",
+                            "Italy",
+                            "Kosovo",
+                            "Latvia",
+                            "Liechtenstein",
+                            "Lithuania",
+                            "Luxembourg",
+                            "Macedonia",
+                            "Malta",
+                            "Moldova",
+                            "Monaco",
+                            "Montenegro",
+                            "Netherlands",
+                            "Norway",
+                            "Poland",
+                            "Portugal",
+                            "Romania",
+                            "Russia",
+                            "San Marino",
+                            "Serbia",
+                            "Slovakia",
+                            "Slovenia",
+                            "Spain",
+                            "Sweden",
+                            "Switzerland",
+                            "Turkey",
+                            "Ukraine",
+                            "United Kingdom",
+                            "Vatican City"
+                        ];
+
+                    //create AutoComplete UI component
+                    $("#countries").kendoAutoComplete({
+                        dataSource: data,
+                        filter: "startswith",
+                        placeholder: "Select country...",
+                        separator: ", "
+                    });
+                });
+            </script>
+
       </div>
     </div>
   </div>

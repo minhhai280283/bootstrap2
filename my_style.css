@@ -44,3 +44,25 @@ img{
 	font- color: white;
 	font-weight: bolder;
 }
+
+.info {
+                    display: block;
+                    line-height: 22px;
+                    padding: 0 5px 5px 0;
+                    color: black;
+                }
+
+               
+                .k-autocomplete
+                {
+                    width: 250px;
+                    vertical-align: middle;
+                }
+
+                .hint {
+                    line-height: 22px;
+                    color: #aaa;
+                    font-style: italic;
+                    font-size: .9em;
+                    color: #7496d4;
+                }

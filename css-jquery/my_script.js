@@ -1,36 +1,9 @@
 $(document).ready(function(){
 
-
-                    
-
-
-
-
-
-  $("#submit").click(function(){
-    $(this).showLoading("toggle");
-  });
-
-  $("#hhh").mouseenter(function(){
-    $("#myModal").modal('show');
-  });
-
-  $("#u19vn").click(function(){
-    $("#u19").modal('show');
-
-  });
-
-  $("#signup").click(function(){
+  
+  $("#signup").click(function () {
     $("#sign_up").modal('show');
   });
-  
-  //validation
-  $.validator.setDefaults({
-    submitHandler: function() {
-      alert("submitted!");
-    }
-  });
-
 
   $("#signupForm").validate({
       rules: {
@@ -39,6 +12,10 @@ $(document).ready(function(){
         username: {
           required: true,
           minlength: 2
+        },
+        name: {
+          required: true,
+          minlength: 5
         },
         password: {
           required: true,
@@ -66,6 +43,10 @@ $(document).ready(function(){
           required: "Please enter a username",
           minlength: "Your username must consist of at least 2 characters"
         },
+        name: {
+          required: "Please enter a name",
+          minlength: "Your username must consist of at least 5 characters"
+        },
         password: {
           required: "Please provide a password",
           minlength: "Your password must be at least 8 characters long"
@@ -80,9 +61,4 @@ $(document).ready(function(){
       }
     });
 
-  //autocomplete
-
-
-  
 });
-
