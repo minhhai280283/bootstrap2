@@ -43,7 +43,7 @@ $(document).ready(function(){
 
   });
 
-  accountform.change(function(){
+  submit.click(function(){
 
     if(accountform.valid()==true){
       $.blockUI();
