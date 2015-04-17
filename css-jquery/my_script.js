@@ -26,8 +26,6 @@ $(document).ready(function(){
       $('#tabs a:last').tab("show");
       prev.show();
       submit.show();
-      step1.hide();
-      step2.show();
       next.hide();
     }
 
@@ -38,9 +36,6 @@ $(document).ready(function(){
     prev.hide();
     submit.hide();
     next.show();
-    step1.show();
-    step2.hide();
-
   });
 
   submit.click(function(){
