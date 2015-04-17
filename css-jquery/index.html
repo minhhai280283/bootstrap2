@@ -10,21 +10,22 @@
   <script type="text/javascript" src="my_script.js"></script>
   <link rel="stylesheet" type="text/css" href="my_style.css">
   <script type="text/javascript" src="jquery/jquery.validate.js"></script>
-  
-  
-<!--autocompleted-->
-   
-  <link rel="stylesheet" href="autocomplete/kendo.common-material.min.css" />
-  <link rel="stylesheet" href="autocomplete/kendo.dataviz.material.min.css" />
-  <link rel="stylesheet" href="autocomplete/kendo.dataviz.min.css" />
-  <link rel="stylesheet" href="autocomplete/kendo.dataviz.material.min.css" />
-  <script src="autocomplete/kendo.all.js.min"></script>
+  <script type="text/javascript" src="jquery/jquery-ui.js"></script>
+  <script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="jquery/jquery.blockUI.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.structure.css">
+  <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.structure.min.css">
+
+
 
 </head>
 <body>
+
   <button id="signup"> Sign up </button>
 
-<!-- Modal Sign up -->
+
     <div id="sign_up" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -33,144 +34,180 @@
                 <h3 id="myModalLabel">Dang ky thanh vien</h3>
               </div>
               <div class="modal-body">
-<!-------->
+
                 <div id="content">
+                  <form class="form-horizontal" id="accountForm">
                     <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                        <li class="active"><a href="#step1" data-toggle="tab">Step 1</a></li>
-                        <li><a href="#step2" data-toggle="tab">Step 2</a></li>
+                      <li class="active"><a href="#step1" data-toggle="tab">Step 1</a></li>
+                      <li><a href="#step2" data-toggle="tab" >Step 2</a></li>
                     </ul>
                     <div id="my-tab-content" class="tab-content">
-                        <div class="tab-pane active" id="step1">
-                            <h2>Individual Information</h2>
-                            <form class="form-horizontal" id="signupForm">
-                              <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label">Email</label>
-                                <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="email" name="email" placeholder="Email">
-                                </div>
-                              </div> 
-                              <div  class="form-group">
-                                <label for="username" class="col-sm-2 control-label">User name</label>
-                                <div class="col-sm-10">
-                                  <input type="name" class="form-control" id="username" name="username" placeholder="username" type="text">
-                                </div>
-                              </div> 
-                              <div class="form-group">
-                                <label for="password" class="col-sm-2 control-label">Password</label>
-                                <div class="col-sm-10">
-                                  <input type="password" class="form-control" id="password" placeholder="password" name="password">
-                                </div>
-                              </div>
-
-                              <div class="form-group">
-                                <label for="confirm_password" class="col-sm-2 control-label"> Confirm Password</label>
-                                <div class="col-sm-10">
-                                  <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="cpassword">
-                                </div>                      
-                              </div>
-
-                              
-
-                              <div class="modal-footer">
-                                   <button type="submit" class="btn btn-default" id="submit">Submit</button>
-                                   <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button> 
-                              </div>
-                            
-
+                      <div class="tab-pane active" id="step1">
+                        <h2>Account</h2>
+                        <div  class="form-group">
+                          <label for="username" class="col-sm-2 control-label">User name</label>
+                          <div class="col-sm-10">
+                            <input type="name" class="form-control" id="username" name="username" placeholder="username" type="text">
+                          </div>
                         </div>
-                        <div class="tab-pane" id="step2">
-                            <h2>Individual Information</h2>                              
-                              <div  class="form-group">
-                                <label for="name" class="col-sm-2 control-label">Name</label>
-                                <div class="col-sm-10">
-                                  <input type="name" class="form-control" id="name" name="name" placeholder="name" type="text">
-                                </div>
-                              </div>
-                              <div  class="form-group">
-                                <label for="country" class="col-sm-2 control-label">Country</label>
-                                <div class="col-sm-10">
-                                  <input type="text" class="form-control info k-autocomplete" id="countries" name="country" placeholder="country" type="text">
-                                </div>
-                              </div>
-
-                              <div class="modal-footer">
-                                   <button type="submit" class="btn btn-default" id="submit">Submit</button>
-                                   <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button> 
-                              </div>
-                            
-
+                        <div class="form-group">
+                          <label for="email" class="col-sm-2 control-label">Email</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                          </div>
                         </div>
-                      </form>   
-                       
+                        <div class="form-group">
+                          <label for="password" class="col-sm-2 control-label">Password</label>
+                          <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" placeholder="password" name="password">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="confirm_password" class="col-sm-2 control-label"> Confirm Password</label>
+                          <div class="col-sm-10">
+                            <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="cpassword">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="tab-pane" id="step2">
+                        <h2>Profile</h2>
+                        <div  class="form-group">
+                          <label for="name" class="col-sm-2 control-label">Name</label>
+                          <div class="col-sm-10">
+                            <input type="name" class="form-control" id="name" name="name" placeholder="name" type="text">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="country" class="col-sm-2 control-label">Country</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="country" name="country" placeholder="country">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="birthday" class="col-sm-2 control-label">Birthday</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="datepicker" name="birthday" placeholder="birthday">
+                            <!-- <input type="text" id="datepicker_value" /> -->
+                          <!--   <input type="text" id="datepicker"> -->
+                            <div id="datepicker"></div>
+                          </div>
+                        </div>
+
+
+                          <!-- <div id="page_output" style="text-align:center; margin-top:80px; margin-bottom:20px; "></div> -->
+
+                      </div>
                     </div>
+
+
+
+                    <div class="modal-footer">
+                      <input type="button" value="next" class="btn" id="next" name="next"  />
+                      <input type="button" class="btn" value="prev" id="prev" name="prev" />
+                      <button type="submit" class="btn" id="submit">Submit</button>
+                      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                    </div>
+                  </form>
+
                 </div>
- 
               </div>
+
+        </div>
     </div>
  <script>
-                $(document).ready(function () {
-                    var data = [
-                            "Albania",
-                            "Andorra",
-                            "Armenia",
-                            "Austria",
-                            "Azerbaijan",
-                            "Belarus",
-                            "Belgium",
-                            "Bosnia & Herzegovina",
-                            "Bulgaria",
-                            "Croatia",
-                            "Cyprus",
-                            "Czech Republic",
-                            "Denmark",
-                            "Estonia",
-                            "Finland",
-                            "France",
-                            "Georgia",
-                            "Germany",
-                            "Greece",
-                            "Hungary",
-                            "Iceland",
-                            "Ireland",
-                            "Italy",
-                            "Kosovo",
-                            "Latvia",
-                            "Liechtenstein",
-                            "Lithuania",
-                            "Luxembourg",
-                            "Macedonia",
-                            "Malta",
-                            "Moldova",
-                            "Monaco",
-                            "Montenegro",
-                            "Netherlands",
-                            "Norway",
-                            "Poland",
-                            "Portugal",
-                            "Romania",
-                            "Russia",
-                            "San Marino",
-                            "Serbia",
-                            "Slovakia",
-                            "Slovenia",
-                            "Spain",
-                            "Sweden",
-                            "Switzerland",
-                            "Turkey",
-                            "Ukraine",
-                            "United Kingdom",
-                            "Vatican City"
-                        ];
 
-                    //create AutoComplete UI component
-                    $("#countries").kendoAutoComplete({
-                        dataSource: data,
-                        filter: "startswith",
-                        placeholder: "Select country...",
-                        separator: ", "
-                    });
-                });
-            </script>
+
+
+    $(document).ready(function () {
+        var data = [
+                "Albania",
+                "Andorra",
+                "Armenia",
+                "Austria",
+                "Azerbaijan",
+                "Belarus",
+                "Belgium",
+                "Bosnia & Herzegovina",
+                "Bulgaria",
+                "Croatia",
+                "Cyprus",
+                "Czech Republic",
+                "Denmark",
+                "Estonia",
+                "Finland",
+                "France",
+                "Georgia",
+                "Germany",
+                "Greece",
+                "Hungary",
+                "Iceland",
+                "Ireland",
+                "Italy",
+                "Kosovo",
+                "Latvia",
+                "Liechtenstein",
+                "Lithuania",
+                "Luxembourg",
+                "Macedonia",
+                "Malta",
+                "Moldova",
+                "Monaco",
+                "Montenegro",
+                "Netherlands",
+                "Norway",
+                "Poland",
+                "Portugal",
+                "Romania",
+                "Russia",
+                "San Marino",
+                "Serbia",
+                "Slovakia",
+                "Slovenia",
+                "Spain",
+                "Sweden",
+                "Switzerland",
+                "Turkey",
+                "Ukraine",
+                "United Kingdom",
+                "Vatican City"
+            ];
+      $( "#country" ).autocomplete({
+        source: data
+      });
+
+    });
+
+    // $( "#datepicker" ).datepicker({
+    //   inline: true
+    // });
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+
+    // Datepicker
+    // $('#datepicker').datepicker({
+    //     dateFormat: 'dd-mm-yy',
+    //     inline: true,
+    //     minDate: new Date(2010, 1 - 1, 1),
+    //     maxDate:new Date(2010, 12 - 1, 31),
+    //     altField: '#datepicker_value',
+    //     onSelect: function(){
+    //         var day1 = $("#datepicker").datepicker('getDate').getDate();
+    //         var month1 = $("#datepicker").datepicker('getDate').getMonth() + 1;
+    //         var year1 = $("#datepicker").datepicker('getDate').getFullYear();
+    //         var fullDate = year1 + "-" + month1 + "-" + day1;
+    //         var str_output = "<h1><center><img src=\"/images/a" + fullDate +".png\"></center></h1><br/><br>";
+    //         page_output.innerHTML = str_output;
+    //     }
+    // });
+
+
+
+
+
+  </script>
 
 </body>
 </html>

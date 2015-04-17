@@ -1,11 +1,80 @@
 $(document).ready(function(){
 
-  
+  var accountform=$("#accountForm");
+  var next=$("#next");
+  var username=$("#username");
+  var email=$("#email");
+  var password=$("#password");
+  var cpassword=$("#confirm_password");
+  var name=$("#name");
+  var country=$("#country");
+  var datepicker=$("#datepicker_value");
+  var step1=$("#step1");
+  var step2=$("#step2");
+  var next=$("#next");
+  var prev=$("#prev");
+  var submit=$("#submit");
+
+
+  prev.hide();
+  submit.hide();
+  // $("#next").hide();
+  // $("#prev").prop('disabled', false);
+
+  next.click(function(){
+    if(accountform.valid()==true){
+      $('#tabs a:last').tab("show");
+      prev.show();
+      submit.show();
+      step1.hide();
+      step2.show();
+      next.hide();
+    }
+
+
+  });
+  prev.click(function(){
+    $('#tabs a:first').tab("show");
+    prev.hide();
+    submit.hide();
+    next.show();
+    step1.show();
+    step2.hide();
+
+  });
+
+  accountform.change(function(){
+
+    if(accountform.valid()==true){
+      $.blockUI();
+
+    }
+  });
+
+
+
+  // next.click(function(){
+
+  //   $('#tabs a:last').tab("show");
+
+
+  // });
+
+  // prev.click(function(){
+
+  //   $('#tabs a:first').tab("show");
+
+
+  // });
+
+
+
+
   $("#signup").click(function () {
     $("#sign_up").modal('show');
   });
 
-  $("#signupForm").validate({
+  $("#accountForm").validate({
       rules: {
         firstname: "required",
         lastname: "required",
@@ -17,6 +86,13 @@ $(document).ready(function(){
           required: true,
           minlength: 5
         },
+
+        country: {
+          required: true,
+
+        },
+
+
         password: {
           required: true,
           minlength: 8
@@ -43,10 +119,7 @@ $(document).ready(function(){
           required: "Please enter a username",
           minlength: "Your username must consist of at least 2 characters"
         },
-        name: {
-          required: "Please enter a name",
-          minlength: "Your username must consist of at least 5 characters"
-        },
+
         password: {
           required: "Please provide a password",
           minlength: "Your password must be at least 8 characters long"
@@ -56,9 +129,24 @@ $(document).ready(function(){
           minlength: "Your password must be at least 8 characters long",
           equalTo: "Please enter the same password as above"
         },
+        password: {
+          required: "Please provide a country",
+          minlength: "Your password must be at least 3 characters long"
+        },
+        name: {
+          required: "Please enter a name",
+          minlength: "Your name must consist of at least 5 characters"
+        },
+        country: {
+          required: "Please provide a country",
+          minlength: "Your password must be at least 3 characters long"
+        },
+
         email: "Please enter a valid email address",
         agree: "Please accept our policy"
       }
     });
+
+
 
 });

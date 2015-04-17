@@ -1,0 +1,14 @@
+.ui-autocomplete-input{
+  z-index: 9999;
+}
+.modal-open .ui-autocomplete{
+  z-index: 9999;
+}
+.modal-open.blockUI {
+  z-index: 10000;
+}
+
+.modal-open .blockOverlay {
+  z-index: 10000;
+}
+
